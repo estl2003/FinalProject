@@ -18,6 +18,7 @@ public class LostItem {
     @Column
     private Long id;
 
+<<<<<<< Updated upstream
     @NotNull
     @Size(max = 100)
     @Column
@@ -112,3 +113,87 @@ public class LostItem {
         isFound = found;
     }
 }
+=======
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column
+	private Long id;
+	
+	@NotNull
+	@Column
+	private String itemName;
+	
+	@NotNull
+	@Column
+	private String dateLost;
+	
+	@NotNull
+	@Column
+	private String locationLost;
+	
+	@Column
+	private double latitude;
+	
+	@Column
+	private double longitude;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getItemName() {
+		return itemName;
+	}
+
+	public void setItemName(String itemName) {
+		this.itemName = itemName;
+	}
+
+	public String getDateLost() {
+		return dateLost;
+	}
+
+	public void setDateLost(String dateLost) {
+		this.dateLost = dateLost;
+	}
+
+	public String getLocationLost() {
+		return locationLost;
+	}
+
+	public void setLocationLost(String locationLost) {
+		this.locationLost = locationLost;
+	}
+
+	public double getLatitude() {
+		return latitude;
+	}
+
+	public void setLatitude(double latitude) {
+		this.latitude = latitude;
+	}
+
+	public double getLongitude() {
+		return longitude;
+	}
+
+	public void setLongitude(double longitude) {
+		this.longitude = longitude;
+	}
+
+	@Override
+	public String toString() {
+		return "LostItem [id=" + id + ", itemName=" + itemName + ", dateLost=" + dateLost + ", locationLost="
+				+ locationLost + ", latitude=" + latitude + ", longitude=" + longitude + "]";
+	}
+	
+	
+	
+	
+	
+}
+>>>>>>> Stashed changes
